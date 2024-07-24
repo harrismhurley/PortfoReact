@@ -1,72 +1,140 @@
-# 19 Progressive Web Applications (PWA): Text Editor
+# 20 React: React Portfolio
 
 ## Your Task
 
-As you have progressed through this course, you have put together a number of impressive projects that you can show off to potential employers. This project is no exception; in fact, it features some of the most impressive expressions of the concepts you have learned so far.
+Being a web developer means being part of a community. You’ll need a place not only to share your projects while you're applying for jobs or working as a freelancer but also to share your work with other developers and collaborate on projects.
 
-Your task is to build a text editor that runs in the browser. The app will be a single-page application that meets the PWA criteria. Additionally, it will feature a number of data persistence techniques that serve as redundancy in case one of the options is not supported by the browser. The application will also function offline.
+Your task is to create a portfolio using your new React skills, which will help set you apart from other developers whose portfolios don’t use the latest technologies.
 
-To build this text editor, you will start with an existing application and implement methods for getting and storing data to an IndexedDB database. You will use a package called `idb`, which is a lightweight wrapper around the IndexedDB API. It features a number of methods that are useful for storing and retrieving data, and is used by companies like Google and Mozilla.
-
-You will deploy this full-stack application to Render using the [Render Deployment Guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/render/render-deployment-guide).
-
-**Important**: Make sure your submission includes the `.npmrc` file in this starter code.  This will ensure your application will deploy properly to Render.
+You’ll deploy this application to Netlify. Follow the instructions in the Git Guide or consult the [Docs on Netlify](https://vitejs.dev/guide/static-deploy.html#netlify) to create a build that you can deploy.
 
 ## User Story
 
 ```md
-AS A developer
-I WANT to create notes or code snippets with or without an internet connection
-SO THAT I can reliably retrieve them for later use
+AS AN employer looking for candidates with experience building single-page applications
+I WANT to view a potential employee's deployed React portfolio of work samples
+SO THAT I can assess whether they're a good candidate for an open position
 ```
 
 ## Acceptance Criteria
 
 ```md
-GIVEN a text editor web application
-WHEN I open my application in my editor
-THEN I should see a client server folder structure
-WHEN I run `npm run start` from the root directory
-THEN I find that my application should start up the backend and serve the client
-WHEN I run the text editor application from my terminal
-THEN I find that my JavaScript files have been bundled using webpack
-WHEN I run my webpack plugins
-THEN I find that I have a generated HTML file, service worker, and a manifest file
-WHEN I use next-gen JavaScript in my application
-THEN I find that the text editor still functions in the browser without errors
-WHEN I open the text editor
-THEN I find that IndexedDB has immediately created a database storage
-WHEN I enter content and subsequently click off of the DOM window
-THEN I find that the content in the text editor has been saved with IndexedDB
-WHEN I reopen the text editor after closing it
-THEN I find that the content in the text editor has been retrieved from our IndexedDB
-WHEN I click on the Install button
-THEN I download my web application as an icon on my desktop
-WHEN I load my web application
-THEN I should have a registered service worker using workbox
-WHEN I register a service worker
-THEN I should have my static assets pre cached upon loading along with subsequent pages and static assets
-WHEN I deploy to Render
-THEN I should have proper build scripts for a webpack application
+GIVEN a single-page application portfolio for a web developer
+WHEN I load the portfolio
+THEN I am presented with a page containing a header, a section for content, and a footer
+WHEN I view the header
+THEN I am presented with the developer's name and navigation with titles corresponding to different sections of the portfolio
+WHEN I view the navigation titles
+THEN I am presented with the titles About Me, Portfolio, Contact, and Resume, and the title corresponding to the current section is highlighted
+WHEN I click on a navigation title
+THEN the browser URL changes and I am presented with the corresponding section below the navigation and that title is highlighted
+WHEN I load the portfolio the first time
+THEN the About Me title and section are selected by default
+WHEN I am presented with the About Me section
+THEN I see a recent photo or avatar of the developer and a short bio about them
+WHEN I am presented with the Portfolio section
+THEN I see titled images of six of the developer’s applications with links to both the deployed applications and the corresponding GitHub repositories
+WHEN I am presented with the Contact section
+THEN I see a contact form with fields for a name, an email address, and a message
+WHEN I move my cursor out of one of the form fields without entering text
+THEN I receive a notification that this field is required
+WHEN I enter text into the email address field
+THEN I receive a notification if I have entered an invalid email address
+WHEN I am presented with the Resume section
+THEN I see a link to a downloadable resume and a list of the developer’s proficiencies
+WHEN I view the footer
+THEN I am presented with text or icon links to the developer’s GitHub and LinkedIn profiles, and their profile on a third platform (Stack Overflow, Twitter)
 ```
 
 ## Mock-Up
 
-The following animation demonstrates the application functionality:
+The following animation shows the web application's appearance and functionality:
 
-![Demonstration of the finished Module 19 Challenge being used in the browser and then installed.](./Assets/00-demo.gif)
+![User clicks through About Me, Portfolio, Resume, and Contact sections on the webpage and enters information on Contact page.](./Assets/20-react-homework-demo-01.gif)
 
-The following image shows the application's `manifest.json` file:
+## Getting Started
 
-![Demonstration of the finished Module 19 Challenge with a manifest file in the browser.](./Assets/01-manifest.png)
+You’ll use `vite` to build your portfolio, which will include the following:
 
-The following image shows the application's registered service worker:
+* A single `Header` component that appears on multiple pages
 
-![Demonstration of the finished Module 19 Challenge with a registered service worker in the browser.](./Assets/02-service-worker.png)
+* A single `Navigation` component within the header that will use `Link` components from `react-router-dom` to conditionally render the different sections of your portfolio
 
-The following image shows the application's IndexedDB storage:
+* A single `Project` component that will be used multiple times in the Portfolio section
 
-![Demonstration of the finished Module 19 Challenge with a IndexedDB storage named 'jate' in the browser.](./Assets/03-idb-storage.png)
+* A single `Footer` component that appears on multiple pages
+
+**Note**: Because this application doesn’t include a back end or connect to an API, the contact form doesn't need to save this information right now. You'll add back-end functionality in the next few weeks. In the meantime, consider including your email address and phone number on the Contact page.
+
+### When you would like to scaffold a new `vite` application on your own, follow these steps
+
+1. In the command line, navigate to the desired parent folder and run `npm create vite@4.4.1`.
+
+    * 🔑 *Note*: This command will automatically create a sub-folder which will house your React application; you do not need to perform a `mkdir` command to create one manually.
+
+2. Enter the desired name of your new project folder.
+
+3. From the first list of options, select your framework; for our activities in class, we'll be using `React`.
+
+4. From the second list of options, select your variant; for our activities in class, we'll be using `JavaScript`.
+
+5. `cd` into your newly created project folder and run `npm install`.
+
+    * In later activities we'll add additional NPM packages to our `vite` apps such as 'bootstrap', 'dotenv', and 'axios'.
+
+6. Run `npm dev`/`npm run dev` and navigate to the prompted URL to see your app.
+
+### Further customization (Recommended)
+
+1. Navigate to your `package.json` and modify the `scripts` object so that it looks like this example:
+
+```json
+  "scripts": {
+    "dev": "vite",
+    "start": "vite",
+    "build": "vite build",
+    "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+```
+
+* Note the addition of the `"start": "vite"` script.
+
+2. Navigate to the `vite.config.js` file and edit the export object so that it looks like this example:
+
+```js
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    port: 3000,
+    open: true
+  }
+})
+```
+
+### Projects
+
+For each project that is featured in your portfolio, include the following:
+
+* An image of the deployed application (either a short animated GIF or screenshot)
+
+* The title of the project
+
+* A link to the deployed application
+
+* A link to the corresponding GitHub repository
+
+### Design
+
+As with the previous portfolio Challenge, remember that "good" design is subjective; however, your site should look polished. Here are a few guidelines on what that means:
+
+* Use mobile-first design.
+
+* Choose a color palette that distinguishes your site from the default Bootstrap theme and unstyled HTML sites. Refer to resources like [Coolors](https://coolors.co/) or another color scheme generator to help you create something that will stand out.
+
+* Ensure that the font size is large enough to read and that the colors don't cause eye strain.
+
+* Consider using animations and React component libraries. Note that this will not affect your grade, but it might impact how potential employers gauge your knowledge.
 
 ## Grading Requirements
 
@@ -84,61 +152,56 @@ This Challenge is graded based on the following criteria:
 
 ### Technical Acceptance Criteria: 40%
 
-* Satisfies all of the above acceptance criteria plus the following:
+* Satisfies all of the preceding acceptance criteria plus the following:
 
-  * Uses IndexedDB to create an object store and includes both GET and PUT methods
+  * Application must use React to render content.
 
-  * The application works without an internet connection
+  * Application has a single `Header` component that appears on multiple pages, with a `Navigation` component within it that’s used to conditionally render About Me, Portfolio, Contact, and Resume sections.
 
-  * Automatically saves content inside the text editor when the DOM window is unfocused
+  * Application has a single `Project` component that’s used multiple times in the Portfolio section.
 
-  * Bundled with webpack
+  * Application has a single `Footer` component that appears on multiple pages.
 
-  * Create a service worker with workbox that Caches static assets
-
-  * The application should use babel in order to use async / await
-
-  * Application must have a generated `manifest.json` using the `WebpackPwaManifest` plug-in
-
-  * Can be installed as a Progressive Web Application
+  * Application must be deployed to Netlify.
 
 ### Deployment: 32%
 
-* Application deployed to Render at live URL with build scripts
+* Application deployed at live URL.
 
-* Application loads with no errors
+* Application loads with no errors.
 
-* Application GitHub URL submitted
+* Application GitHub URL submitted.
 
-* GitHub repo contains application code
+* GitHub repository contains application code.
 
 ### Application Quality: 15%
 
-* Application user experience is intuitive and easy to navigate
+* User experience is intuitive and easy to navigate.
 
-* Application user interface style is clean and polished
+* User interface style is clean and polished.
 
-* Application resembles the mock-up functionality provided in the Challenge instructions
+* Application uses a color scheme other than the default Bootstrap color palette.
 
 ### Repository Quality: 13%
 
-* Repository has a unique name
+* Repository has a unique name.
 
-* Repository follows best practices for file structure and naming conventions
+* Repository follows best practices for file structure and naming conventions.
 
 * Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
 
-* Repository contains multiple descriptive commit messages
+* Repository contains multiple descriptive commit messages.
 
-* Repository contains quality README file with description, screenshot, and link to deployed application
+* Repository contains high-quality README file with description, screenshot, and link to deployed application.
 
 ## Review
 
-You are required to submit the following for review:
+You are required to submit BOTH of the following for review:
 
-* The URL of the deployed application
+* The URL of the functional, deployed application.
 
-* The URL of the GitHub repository, with a unique name and a README describing the project
+* The URL of the GitHub repository, with a unique name and a README that describes the project.
 
-- - -
+---
+
 © 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
