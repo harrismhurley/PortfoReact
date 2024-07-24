@@ -1,19 +1,26 @@
+import profImage from "../../assets/profile/profile.png"
+
 function About() {
-    return (
-      <section className="my-5">
-        <div className="my-2">
-          <div className="profile-img my-5">
-          <i className="fas fa-user-circle" style={{ fontSize: "96px" }}></i>
-          </div>
-          <p>
-          Helvetica put a bird on it church-key Blue Bottle banjo bespoke brunch Etsy authentic Marfa quinoa typewriter plaid direct trade small batch wayfarers bicycle rights cliche craft beer gastropub single-origin coffee Godard Carles you probably haven't heard of them irony pickled kitsch synth sriracha gentrify literally heirloom blog Truffaut paleo scenester
-          </p>
-          <p>
-          Echo Park sriracha Pinterest vegan biodiesel 90's irony iPhone Kickstarter Carles crucifix kitsch narwhal dreamcatcher pickled trust fund selvage art party letterpress Tumblr post-ironic kogi Thundercats Tonx Brooklyn Pitchfork Odd Future authentic normcore freegan leggings Schlitz chambray organic tousled retro fap squid street art church-key fashion axe Wes Anderson bespoke whatever gentrify banh mi you probably haven't heard of them American Apparel next level pug ugh.
-          </p>
+  return (
+    <section className="my-5">
+      <div className="my-2">
+        <div className="profile-img my-5">
+          <img 
+          src={profImage} 
+          alt="Profile Image" 
+          style={{ width: "96px", height: "96px", borderRadius: "50%" }}/>
         </div>
-      </section>
-    );
-  }
+        <p>
+        “Sincerity does not only complete the self; it is the means by which all things are completed. As the self is completed, there is human-heartedness; as things are completed, there is wisdom. This is the virtue of one’s character, and the Way of joining the internal and external. Thus, when we use this, everything is correct.”     
+        </p>
+        <p>― Yamamoto Tsunetomo, Hagakure: The Book of the Samurai </p>
+        &nbsp;
+        <p>
+        Software Engineer with a strong foundation in software development, data analysis, and algorithm design. Skilled in advanced data processing and problem-solving. Eager to apply technical knowledge to real-world challenges. Passionate about continuous learning and contributing to innovative projects within a collaborative team environment.
+        </p>
+      </div>
+    </section>
+  );
+}
 
 export default About;

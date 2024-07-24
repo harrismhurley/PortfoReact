@@ -6,8 +6,8 @@ function Footer() {
             link: "https://github.com/harrismhurley",
         },
         {
-            name: "fab fa-linkedub",
-            link: "www.linkedin.com/in/harris-hurley/",
+            name: "fab fa-linkedin",
+            link: "https://www.linkedin.com/in/harris-hurley/",
         },
         {
             name: "fab fa-stack-overflow",
