@@ -5,7 +5,7 @@ import Error from './components/Error';
 import About from './components/About';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
-// import Resume from './components/Resume';
+import Resume from './components/Resume';
 import './index.css';
 
 const router = createBrowserRouter([
@@ -26,10 +26,10 @@ const router = createBrowserRouter([
         path: 'contact',
         element: <Contact />,
       },
-      // {
-      //   path: 'resume',
-      //   element: <Resume />,
-      // },
+      {
+        path: 'resume',
+        element: <Resume />,
+      },
     ],
   },
 ]);
