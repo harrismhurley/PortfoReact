@@ -33,6 +33,20 @@ function Portfolio() {
             link: "https://harrismhurley.github.io/White-Sand-Beach-Blog/",
             repo: "https://github.com/harrismhurley/White-Sand-Beach-Blog"
         },
-
     ]);
+
+    return (
+        <div>
+          <div className="flex-row">
+            {projects.map((project, idx) => (
+              <Project
+                project={project}
+                key={"project" + idx}
+              />
+            ))}
+          </div>
+        </div>
+      );
 };
+
+export default Portfolio;

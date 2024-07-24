@@ -1,7 +1,7 @@
-import { link } from 'react-router-dom';
-import { capitolized } from '../../utils/helpers';
+import { Link } from 'react-router-dom';
+import { capitalized } from '../../utils/helpers';
 
-function nav({ currentPage }) {
+function Nav({ currentPage }) {
     const pages = ['portfolio', 'contact', 'resume'];
 
     return (
@@ -18,7 +18,7 @@ function nav({ currentPage }) {
                         className={`mx-5 ${currentPage === `/${Page}` && 'navActive'}`}
                         key={Page}
                     >
-                        <Link to={`/${Page}`}>{capitalizeFirstLetter(Page)}</Link>
+                        <Link to={`/${Page}`}>{capitalized(Page)}</Link>
                     </li>
                 ))}
             </ul>
