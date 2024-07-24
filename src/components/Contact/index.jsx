@@ -69,5 +69,7 @@ function Contact() {
                 <button type='submit'>Submit</button>
             </form>
         </section>
-    )
+    );
 }
+
+export default Contact;
