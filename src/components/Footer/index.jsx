@@ -11,7 +11,7 @@ function Footer() {
         },
         {
             name: "fab fa-stack-overflow",
-            link: "https://stackoverflow.com/users/26500350/harrismhurley",
+            link: "https://stackoverflow.com/users/26500350",
         },
     ]
 
