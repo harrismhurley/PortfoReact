@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import App from './App.jsx';
-import Error from './components/ErrorPage';
+import App from './App';
+import Error from './components/Error';
 import About from './components/About';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
@@ -16,22 +16,22 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <About />
+        element: <About />,
       },
       {
         path: 'portfolio',
-        element: <Portfolio />
+        element: <Portfolio />,
       },
       {
         path: 'contact',
-        element: <Contact />
+        element: <Contact />,
       },
       {
         path: 'resume',
-        element: <Resume />
-      }
-    ]
-  }
+        element: <Resume />,
+      },
+    ],
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
