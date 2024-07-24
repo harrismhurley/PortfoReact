@@ -5,12 +5,10 @@ main {
   padding: 50px 30px;
 }
 :root {
-  --primary: #8c54ff;
-  --secondary: #31343D;
-  --tertiary: #b12704;
+  --secondary: #46484F;
   --light: #fafafa;
-  --dark: #799FBA;
-  --darker: #1F3B60;
+  --dark: #23252D;
+  --darker: #0F0E11;
   --alpha: rgba(255,255,255,.7);
   --error: rgb(228, 46, 1);
   --spacing-one: calc(1rem * 0.5);
@@ -41,7 +39,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Aladin', cursive;
+  font-family: "Orbitron", sans-serif;
   font-weight: 500;
   margin: 5px 0;
   line-height: 1.25;
@@ -156,7 +154,7 @@ span[role='img'] {
     height: 30px;
   }
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 700px) {
   nav {
     position: static;
     display: block;
@@ -239,6 +237,7 @@ header {
 }
 header h1 {
   position: relative;
+  font-size: 3.5rem;
   z-index: 2;
 }
 header img {
@@ -271,8 +270,8 @@ img {
 /* Nav Styles */
 nav {
   position: relative;
-  font-family: 'Aladin', cursive;
-  font-size: 2.5rem;
+  font-family: "Orbitron", sans-serif;
+  font-size: 2rem;
   margin: 30px 20px;
 }
 nav a:hover {
