@@ -28,14 +28,14 @@ function Portfolio() {
             repo: "https://github.com/harrismhurley/Task_ManagerHQ"
         },
         {
-            name: 'WhiteSandBeachBlog',
+            name: 'WhiteSand',
             description: 'Javssctipt/CSS',
             link: "https://harrismhurley.github.io/White-Sand-Beach-Blog/",
             repo: "https://github.com/harrismhurley/White-Sand-Beach-Blog"
         },
     ]);
 
-    
+
     return (
         <div>
           <div className="flex-row">
