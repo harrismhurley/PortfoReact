@@ -8,7 +8,7 @@ This project is a professional portfolio website built using React. The portfoli
 
 ## Deployed Application URL
 
-[PortfoReact](https://flourishing-cobbler-a31175.netlify.app/)
+[PortfoReact](https://harrismhurley-portfolio.netlify.app/)
 
 ## Table of Contents
 * [Installation](#installation)
